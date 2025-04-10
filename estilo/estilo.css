@@ -1,117 +1,188 @@
-/* Aqui van los comentarios de CSS*/
+/* -------- Aqui van los comentarios de CSS ------- */
 *{
+    /* -- Margin y padding sirve para eliminar los margenes predeterminados -- */
     margin: 0;
     padding: 0;
+    /* -- Establece un modelo de caja para trabajar en los elementos por igual -- */
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+/* ----- Trabajamos en el cuerpo del código ----- */
 body{
+    /* -- Elegimos el estilo de letra para todo el cuerpo -- */
     font-family: "Open Sans", Arial, sans-serif;
+    /* -- Elegimos el tamaño de letra en el cuerpo -- */
     font-size: 16px;
 }
 
-/** Le damos estilo a la clase contenedor*/
+/* Le damos estilo a la clase contenedor*/
 .contenedor
 {
+    /* -- Establecemos el contenedor al 90% del tamaño total -- */
     width: 90%;
+    /* -- Le agregamos como máximo 1000 pixeles -- */
     max-width: 1000px;
+    /* -- Centramos el contenedor -- */
     margin: auto;
+    /* -- Oculta el contenido que se desborde del contenedor -- */
     overflow: hidden;
 }
 
 /* ------- HEADER ------ */
 header {
+    /* -- Es lo que vamos a usar de espacio en el encabezado -- */
     width: 100%;
+    /* -- La imagen que vamos a usar en el encabezado -- */
     background: url(../img/fondo.webp) #3a5a5f;
+    /* -- El tamaño de la imagen en que cubra todo -- */
     background-size: cover;
+    /* -- Deja la imagen fija en pantalla y ello da ilusion de efecto al scrollear -- */
     background-attachment: fixed;
+    /* -- Le damos posición centrada -- */
     background-position: center 0;
 }
 
+/* -- Comenzamos a trabajar en el Menú -- */
 header .menu {
+    /* -- Le damos la dirección al menú de izq, centrado, o derecha -- */
     text-align: right;
 }
 
+/* -- Trabajamos en el contenedor del encabezado -- */
 header .contenedor {
     position: relative;
+    /* -- Establece la altura -- */
     height: 700px;
 }
 
+/* -- Trabajamos en el contenido del menú, es decir en las seeciones -- */
 header .menu a{
-    color: #fff;
+    /* -- Le damos color a las secciones del menú -- */
+    color: #000000;
+    /* -- Le damos color al fondo -- */
+    background-color: #b2ffa7;
+    /* -- Damos el tamaño de letra en pixeles -- */
     font-size: 20px;
+    /* -- Le damos el grosor de letra -- */
     font-weight: 300;
+    /* -- Marcamos que las palabras no tengan linea de subrayado -- */
     display: inline-block;
+    /* -- Establecemos los margenes de la sección -- */
     margin: 40px 20px;
+    /* -- Marcamos que no tenga decoración la sección -- */
     text-decoration: none;
+    /* -- Hace que la sección esté por delante -- */
     position: relative;
 }
 
+/* -- Trabajamos en el menú para tener estilos cuando se le pase el cursor -- */
 header .menu a:hover {
+    /* -- Que cree un subrayado al pasarle el cursor -- */
     text-decoration: underline;
-    background-color: #88b2a9;
+    /* -- Darle color de fondo al pasarle el cursor -- */
+    background-color: #d3e4e0;
 }
 
+/* -- Le establecemos estilos al texto -- */
 header .texto {
+    /* -- Le damos el ancho al texto -- */
     width: 100%;
+    /* -- Le damos el color al texto -- */
     color: #fff;
+    /* -- La posición del texto -- */
     position: absolute;
-    top: 50%;
+    /* -- La posición en altura -- */
+    top: 60%;
+    /* -- -- */
     margin-top: -52px;
 }
 
+/* -- Estilo al nombre de la Empresa -- */
 header .texto .nombre {
+    /* -- El tamaño de letra -- */
     font-size: 50px;
+    /* -- El grosor de letra -- */
     font-weight: 600;
 }
 
+/* -- Estilo en la descripción del encabezado -- */
 header .texto h3 {
+    /* -- El groso de letra -- */
     font-weight: 300;
+    /* -- Tamaño de letra -- */
     font-size: 25px;
+    /* -- El estilo de letra -- */
     font-style: italic;
 }
 
-/* ------- MAIN ------ */
+/* ------- Trabajar en el MAIN ------ */
+
+/* -- Trabajamos en el fondo -- */
 .main {
+    /* -- Color del fondo -- */
     background: #f5f5f5;
+    /* -- Hace que se repita el fondo -- */
     background-repeat: repeat;
 }
 
+/* -- Vamos a trabajar en el Texto del Acerca De -- */
 .main .acerca-de .contenedor {
+    /* -- Hace que el contenido que se desborda sea visible -- */
     overflow: visible;
+    /* -- La posición del contenedor -- */
     position: relative;
-    /*-- para dar espacio a la imagen */
+    /*-- para dar espacio con relleno en la parte superior -- */
     padding-top: 400px;
 }
 
+/* -- Trabajamos en la primera foto -- */
 .main .acerca-de .foto {
-    width: 80%;
+    /* -- EL uso de la imagen -- */
+    width: 100%;
+    /* -- Posición del elemento por delante -- */
     position: absolute;
-    left: 0;
+    /* -- Posición desde la parte superior -- */
     top: 0;
-    z-index: 0;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0,.35);
+    /* -- Un margen desde la parte superior -- */
+    padding-top: 10px;
+    /* -- Un margen desde la parte de abajo -- */
+    padding-bottom: 10px;
+    /* -- Un margen desde la parte izquierda -- */
+    padding-left: 100px;
+    /* -- Un margen desde la parte derecha -- */
+    padding-right: 100px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0);
 }
 
+/* -- La sección del completa de la imagen -- */
 .main .acerca-de .foto img {
+    /* -- -- */
     vertical-align: top;
+    /* -- Uso del 100% de imagen -- */
     width: 100%;
 }
 
+/* -- Trabajar el estilo del texto -- */
 .main .acerca-de article {
+    /* -- El color de fondo de la leta -- */
     background: #fff;
+    /* -- El relleno en pixeles -- */
     padding: 40px;
+    /* -- El ancho según su elemento padre -- */
     width: 50%;
+    /* -- La posición que puede ser movible -- */
     position: relative;
-    top: 0;
-    z-index: 1;
-    float: right;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0,.35);
-    margin-top: 20px;
+    /* -- Hace que el elemento o sección esté en su posición -- */
+    float: left;
+    /* -- La sombra de la sección -- */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0,.5);
+    /* -- Margen superior -- */
+    margin-top: 40px;
 }
 
+/* -- Estilo en el contenido del Acerca De -- */
 .main .acerca-de article h3 {
     font-size: 50px;
     font-weight: 300;
@@ -119,39 +190,62 @@ header .texto h3 {
     color: #3a5a5f;
 }
 
+/* -- La sección o marcos del Acerca De -- */
 .main .acerca-de article p{
     line-height: 20px;
     margin-bottom: 15px;
 }
 
+/* ---------- Menú -------- */
+
+/* -- Toda la sección del contenido menú -- */
 .main .menu {
+    /* -- El relleno superior en pixeles -- */
     padding-top: 100px;
+    /* -- El margen superior en pixeles -- */
     margin-bottom: 50px;
+    /* -- Limpia el elemento flotante -- */
     clear: both;
 }
 
+/* -- El estilo en el titulo del cuadro "Productos" -- */
 .main .menu #seccion {
+    /* -- Tamaño de letra -- */
     font-size: 40px;
+    /* -- El Grosor de letra -- */
     font-weight: 300;
+    /* -- Letra centrada -- */
     text-align: center;
+    /* -- Margen inferior -- */
     margin-bottom: 40px;
-    color: #3a5a5f;
+    /* -- Color -- */
+    color: #c020c0;
 }
 
+/* -- Trabajar en la sección de los cuadros del contenido -- */
 .main .menu .contenedor-productos,
 .main .menu .contenedor-productos2 {
+    /* -- Establecemos los bordes y color -- */
     border: 1px solid #88b2a9;
+    /* -- un fondo transparente -- */
     background: transparent;
-    padding: 10px;
+    /* -- Separación de los cuadros -- */
+    padding: 15px;
+    /* -- Visibilidad del contenido -- */
     overflow: hidden;
 }
 
+/* -- Secciones del contenido a mostrar de productos -- */
 .main .menu article {
+    /* -- Separamos la sección a trabajar en 3 porque son 3 elementos principales -- */
     width: 33.33%;
+    /* -- Que se establesca en la izquierda -- */
     float: left;
+    /* -- El relleno en pixeles -- */
     padding: 20px;
 }
 
+/* -- Las secciones de los productos -- */
 .main .menu .categoria {
     font-size: 22px;
     font-weight: 700;
@@ -160,6 +254,7 @@ header .texto h3 {
     color: #3a5a5f;
 }
 
+/* -- La sección de los prodcutos que se venden  -- */
 .main .menu .productos {
     margin-bottom: 30px;
     padding-bottom: 20px;
@@ -167,6 +262,7 @@ header .texto h3 {
     overflow: hidden;
 }
 
+/* -- El estilo  del nombrel producto -- */
 .main .menu .nombre {
     font-size: 20px;
     margin-bottom: 15px;
@@ -174,6 +270,7 @@ header .texto h3 {
     color: #3a5a5f;
 }
 
+/* -- El estilo del precio del producto -- */
 .main .menu .precio {
     font-size: 20px;
     margin-bottom: 15px;
@@ -181,6 +278,7 @@ header .texto h3 {
     color: #5a7f78;
 }
 
+/* -- La imagen de las secciones de la categoria de productos -- */
 .main .menu img {
     width: 100%;
     height: 200px;
@@ -188,15 +286,18 @@ header .texto h3 {
     margin-bottom: 20px;
 }
 
+/* -- La sección de las fotos del invernadero -- */
 .main .galeria {
     overflow: hidden;
 }
 
+/* -- Estilo de la foto ingresada -- */
 .main .galeria .foto {
     width: 25%;
     float: left;
 }
 
+/* -- Estilo a la imagen -- */
 .main .galeria .foto img {
     width: 100%;
     vertical-align: top;
@@ -205,6 +306,8 @@ header .texto h3 {
     object-fit: cover;
 }
 
+
+/* -- Las acciones al señalar la imagen con el mouse -- */
 .main .galeria .foto img:hover {
     opacity: 1;
     -webkit-transition: all .3 ease;
@@ -212,12 +315,14 @@ header .texto h3 {
     transition: all .3 ease;
 }
 
+/* ----- UBICAIÖN ----- */
 .main .ubicación  {
     background: #fff;
     padding: 60px 0;
     overflow: hidden;
 }
 
+/* --  estilo al titulo de la ubicación -- */
 .main .ubicación .titulo {
     text-align: center;
     font-size: 40px;
@@ -227,12 +332,14 @@ header .texto h3 {
     color: #3a5a5f;
 }
 
+/* -- Estilo al texto de la dirección -- */
 .main .ubicación .direccion {
     float: left;
     width: 50%;
     text-align: left;
 }
 
+/* -- Estilo de texto en horarios -- */
 .main .ubicación .horarios {
     float: right;
     width: 50%;
@@ -240,11 +347,13 @@ header .texto h3 {
     overflow: hidden;
 }
 
+/* -- Estilo de letra en la información de ubicación -- */
 .main .ubicación .direccion .calle {
     margin-bottom: 15px;
     color: #5a7f78;
 }
 
+/* -- Estilo de texto en los horarios -- */
 .main .ubicación .horarios h4 {
     text-align: center;
     margin-bottom: 20px;
@@ -268,7 +377,7 @@ header .texto h3 {
     max-height: 600px;
 }
 
-/* Formulario - Manteniendo estilo referencial */
+/*----- Formulario ----- */
 .seccion-formulario {
     background: #fff;
     padding: 60px 0;
@@ -332,49 +441,9 @@ footer {
     background: #3a5a5f;
 }
 
+/* ----- Línea de copyright ---*/
 footer .copyright {
     text-align: center;
     padding: 15px 0;
     color: #fff;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .main .menu article {
-        width: 50%;
-    }
-    
-    .main .galeria .foto {
-        width: 50%;
-    }
-}
-
-@media (max-width: 480px) {
-    .main .menu article {
-        width: 100%;
-    }
-    
-    .main .galeria .foto {
-        width: 100%;
-    }
-    
-    .main .acerca-de .foto,
-    .main .acerca-de article {
-        width: 100%;
-        position: static;
-        float: none;
-    }
-    
-    .main .acerca-de article {
-        top: 0;
-        margin-top: 20px;
-    }
-    
-    .main .ubicación .direccion,
-    .main .ubicación .horarios {
-        width: 100%;
-        float: none;
-        text-align: center;
-        margin-bottom: 30px;
-    }
 }
